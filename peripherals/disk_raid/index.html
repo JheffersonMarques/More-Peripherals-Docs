@@ -13,7 +13,7 @@
     
     
       
-        <title>Grindstone Interface - More Peripherals Docs</title>
+        <title>Disk Raids - More Peripherals Docs</title>
       
     
     
@@ -59,7 +59,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#grindstone-interface" class="md-skip">
+        <a href="#disk-raid" class="md-skip">
           Skip to content
         </a>
       
@@ -92,7 +92,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Grindstone Interface
+              Disk Raids
             
           </span>
         </div>
@@ -275,21 +275,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../grindstone_interface/" class="md-nav__link">
         Grindstone Interface
       </a>
-      
     </li>
   
 
@@ -369,11 +359,21 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../disk_raid/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         Disk Raids
       </a>
+      
     </li>
   
 
@@ -465,25 +465,46 @@
                 
 
 
-<h1 id="grindstone-interface">Grindstone Interface</h1>
+<h1 id="disk-raid">Disk Raid</h1>
 <hr />
-<p>Interacts with the grindstone, permiting item repair, and desenchanting,
-needs a Grindstone in any block face to work</p>
+<p>The disk raid is a way to mount 5 to 10 disk drives on a single block</p>
+<p>The normal one has 5 disk slots
+The advanced one has 10 disk slots</p>
 <table>
 <thead>
 <tr>
 <th>Methods</th>
-<th>Descriptions</th>
+<th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>combine(from:string,fromSlot:number,resources:string,resourceSlot:number)</td>
-<td>Combines two items, repair them, and remove the enchants if any are present</td>
+<td>isDiskPresent(slot: number)</td>
+<td>Returns a boolean representing if there is a disk in that slot</td>
 </tr>
 <tr>
-<td>disenchant(from:string,slot:int,[collector:string])</td>
-<td>disenchants an item, and puts the xp in the XP collector if it is present</td>
+<td>getDiskLabel(slot: number)</td>
+<td>Returns the disk label</td>
+</tr>
+<tr>
+<td>setDiskLabel(slot: number, [label:String])</td>
+<td>Sets the disk label to a custom one or the default in the specified slot</td>
+</tr>
+<tr>
+<td>hasData(slot: number)</td>
+<td>Returns a boolean if there is data in the disk on the specificed slot</td>
+</tr>
+<tr>
+<td>getMountPath(slot: number)</td>
+<td>Returns the mount path for the disk on the specificed slot</td>
+</tr>
+<tr>
+<td>ejectDisk(slot: number)</td>
+<td>Unmouns and drops a disk located on the slot</td>
+</tr>
+<tr>
+<td>getDiskID(slot: number)</td>
+<td>Return the disk id of the selected slot</td>
 </tr>
 </tbody>
 </table>
@@ -500,7 +521,7 @@ needs a Grindstone in any block face to work</p>
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
         
-        <a href="../grinder/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Grinder" rel="prev">
+        <a href="../xp_collector/" class="md-footer__link md-footer__link--prev" aria-label="Previous: XP Collector" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
           </div>
@@ -509,20 +530,20 @@ needs a Grindstone in any block face to work</p>
               <span class="md-footer__direction">
                 Previous
               </span>
-              Grinder
+              XP Collector
             </div>
           </div>
         </a>
       
       
         
-        <a href="../loom_interface/" class="md-footer__link md-footer__link--next" aria-label="Next: Loom Interface" rel="next">
+        <a href="../../items/mob_data_card/" class="md-footer__link md-footer__link--next" aria-label="Next: Mob Data Card" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Loom Interface
+              Mob Data Card
             </div>
           </div>
           <div class="md-footer__button md-icon">
